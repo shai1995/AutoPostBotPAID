@@ -5,7 +5,7 @@ API_ID = int(environ.get('API_ID', ''))
 API_HASH = environ.get('API_HASH', '')
 BOT_TOKEN = environ.get('BOT_TOKEN', '')
 ADMIN = environ.get('ADMIN', '')
-PORT = os.environ.get('PORT', '8080')
+
 
 MONGO_DB_URL = environ.get('MONGO_DB_URL', '')
 
