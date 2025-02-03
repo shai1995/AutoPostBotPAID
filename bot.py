@@ -125,6 +125,13 @@ async def check_time_match(user_time, user_date):
     else:
         return False
 
+async def start(self):
+        # Start aiohttp web server
+        app = web.AppRunner(await wsrvr())
+        await app.setup()
+        ba = "0.0.0.0"
+        port = int(os.environ.get("PORT", 8080)) or 8080
+        await web.TCPSite(app, ba, port).start()
 
 async def perform_broadcast():
     try:
